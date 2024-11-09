@@ -4,51 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
     <div id=" Student_In">
-        <form action="/submit" method="post">
-            <!-- Text Box -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
+        <form action="/signIn" method="post">    
+            <!-- Text Box for UB ID -->
+            <label for="UBID">UB ID:</label>
+            <input type="text" id="UBID" name="UBID" placeholder="Enter Your UBID">
     
-            <imput type=""></imput>
-            <br><br>
+            <label for="UBID">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Your UBID">
     
-            <!-- Select Box -->
-            <label for="options">Choose an option:</label>
-            <select id="options" name="option">
-                <option value="CSE 115">CSE 115</option>
-                <option value="CSE 116">CSE 116</option>
-            </select>
+            
     
-            <br><br>
-    
-            <!-- Submit Button -->
-            <button type="submit">Submit</button>
+            <!-- add to list Button -->
+            <button type="submit">Sign In</button>
+
         </form>
-    </div>
-    <div id="CSE116">
-        <h1>
-            CSE116
-        </h1>
-        <ol>
-            <li>Hi</li>
-            <li>hello</li>
-            {% for item in items %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ol>
-    </div>
-    <div id="CSE115">
-        <h1>
-            CSE115
-        </h1>
-        <ol>
-            {% for item in items %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ol>
     </div>
 </body>
 </html>
