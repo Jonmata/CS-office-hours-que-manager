@@ -1,14 +1,24 @@
+#from Student_Class import Student
+   
 # Create a Linked List Node Class
 class Node:
-    def __init__(self, name):
+    def __init__(self, name, ubit, course):
         # Instance variables 
-        self.name = name
+        self.name = name 
+        self.ubit = ubit
+        self.course = course
         self.next = None
 
         # Getter Functions
         def get_name(self):
             return self.name
-        
+    
+        def get_ubit(self):
+            return self.ubit
+    
+        def get_course(self):
+            return self.course
+
         def get_next(self):
             return self.next
 
@@ -21,8 +31,8 @@ class LinkedList:
         self.tail = None
 
     # Method enqueue students to the back for the queue
-    def enqueue(self, name):
-        new_node = Node(name)
+    def enqueue(self, name, ubit, course):
+        new_node = Node(name, ubit, course)
         if self.head is None and self.tail is None:
             self.head = new_node
             self.tail = new_node
@@ -32,31 +42,31 @@ class LinkedList:
             self.tail = new_node
 
 
-    def dequeue(self, name):
+    def dequeue(self, value):
         current_node = self.head
         prev_node = None
         # List is empty
         if (current_node == None):
             return
         # List only has one node 
-        if (self.head.name == self.tail.name and self.head.name == name):
+        if ( self.head.ubit == self.tail.ubit and self.head.ubit == value ):
             self.head = None
             self.tail = None
         else:
             # removing first person in the queue
-            if (current_node.name == name):
+            if (current_node.ubit == value):
                 self.head = current_node.next
             else:
                 # removing a node that's not the head node
                 prev_node = current_node
-                while(current_node.name != self.tail.name):
-                    if (current_node.name == name):
+                while(current_node.value != self.tail.value):
+                    if (current_node.ubit == value):
                         prev_node.next = current_node.next
                     prev_node = current_node
                     current_node = current_node.next
 
                 #Tail node is the node to remove
-                if (self.tail.name == name):
+                if (self.tail.ubit == value):
                     self.tail = prev_node
                     prev_node.next = None
                     return
@@ -74,10 +84,14 @@ class LinkedList:
 '''
 llist = LinkedList()
 
-llist.enqueue('a')
-llist.dequeue('a')
+#n1 = Node("John", "UBIT1", "CSE 115")
+llist.enqueue("John", "UBIT1", "CSE 115")
+llist.dequeue("UBIT1")
 
-llist.enqueue('New Student')
+llist.enqueue("Kevin", "UBIT2", "CSE 116")
+#llist.dequeue('a')
+
+#llist.enqueue('New Student')
 llist.printLL()
 
 
