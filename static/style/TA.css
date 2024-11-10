@@ -9,6 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    background-image: url(https://www.buffalo.edu/content/www/brand/resources-tools/ub-templates-and-tools/digital-wallpaper/_jcr_content/par/image_1823359380.img.original.jpg/1565031485026.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +19,7 @@ body {
 /* Admin Header */
 .header {
     font-size: 2rem;
-    color: #0056b3;
+    color: black;
     text-align: center;
     margin: 2rem 0;
 }

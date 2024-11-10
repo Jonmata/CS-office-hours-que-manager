@@ -12,6 +12,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f4f4f9;
+    background-image: url(https://www.buffalo.edu/content/www/brand/resources-tools/ub-templates-and-tools/digital-wallpaper/_jcr_content/par/image_1823359380.img.original.jpg/1565031485026.jpg);
     color: #333;
     flex-direction: column;
 }
@@ -20,7 +21,7 @@ body {
 .header {
     text-align: center;
     font-size: 2rem;
-    color: #0056b3;
+    color: black;
     margin-bottom: 2rem;
 }
 
