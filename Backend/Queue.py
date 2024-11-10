@@ -81,6 +81,14 @@ class LinkedList:
             print(current_node.name)
             current_node = current_node.next
 
+    def get_all(self):
+        List =[]
+        current_node = self.head
+        while(current_node):
+            List.append(current_node)
+            current_node = current_node.next
+        return List
+
 '''
 llist = LinkedList()
 
