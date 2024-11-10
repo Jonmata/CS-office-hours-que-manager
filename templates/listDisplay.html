@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../static/style/listDisplay.css">
 </head>
 <body>
-    <div id=" Student_In">
+    <div class="container" >
+<div id=" Student_In">
         <form action="/removeSelf" method="post">
             <!-- Text Box for name -->
             <label for="name">Name:</label>
@@ -16,10 +18,8 @@
             <label for="UBID">UB ID:</label>
             <input type="text" id="UBID" name="UBID" placeholder="Enter Your UBID">
     
-            <br><br>
-    
             <!-- Select course Box -->
-            <label for="options">Choose an option:</label>
+            <label for="options">Course:</label>
             <select id="options" name="option">
                 <option value="CSE 115">CSE 115</option>
                 <option value="CSE 116">CSE 116</option>
@@ -55,6 +55,8 @@
             {% endfor %}
         </ol>
     </div>
+    </div>
+    
 
 </body>
 </html>

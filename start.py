@@ -14,7 +14,7 @@ def signInfun():
     password = request.form.get("password")
 
     
-    return render_template("TA.html")
+    return render_template("studentSignIn.html")
 
 
 @app.route("/studentAdd", methods=["POST"])
