@@ -59,7 +59,7 @@ class LinkedList:
             else:
                 # removing a node that's not the head node
                 prev_node = current_node
-                while(current_node.value != self.tail.value):
+                while(current_node.ubit != self.tail.ubit):
                     if (current_node.ubit == value):
                         prev_node.next = current_node.next
                     prev_node = current_node
