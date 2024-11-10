@@ -7,64 +7,65 @@
     <link rel="stylesheet" href="../static/style/TA.css">
     <script>
         function setFormAction(action) {
-            // Set the hidden input field's value to indicate the action
             document.getElementById("action").value = action;
-            // Submit the form
             document.getElementById("studentForm").submit();
         }
     </script>
 </head>
 <body>
-    <div id="studentIn">
-        <form id="studentForm" action="/submit" method="post">
-            <!-- Hidden input for action type -->
-            <input type="hidden" id="action" name="action" value="">
+    <div class="outside">
+        <h1 class="header">Admin Page</h1>
+    <div class="container">
+        <div id="CSE116">
+            <h1>CSE 116</h1>
+            <ol>
+                {% for student in cse116_students %}
+                <li>{{ student.name }} </li>
+                {% endfor %}
+            </ol>
+        </div>
+        <!-- Display Lists -->
+        <div id="CSE115">
+            <h1>CSE 115</h1>
+            <ol>
+                {% for student in cse115_students %}
+                <li>{{ student.name }} </li>
+                {% endfor %}
+            </ol>
+        </div>
 
-            <!-- Text Box for name -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
-    
-            <!-- Text Box for UB ID -->
-            <label for="UBID">UB ID:</label>
-            <input type="text" id="UBID" name="UBID" placeholder="Enter your UBID">
-    
-            <br><br>
-    
-            <!-- Select Course Box -->
-            <label for="options">Course:</label>
-            <select id="options" name="option">
-                <option value="CSE 115">CSE 115</option>
-                <option value="CSE 116">CSE 116</option>
-            </select>
-    
-            <br><br>
-    
-            <!-- Add and Remove Buttons -->
-            <button type="button" onclick="setFormAction('add')">Add</button>
-            <button type="button" onclick="setFormAction('remove')">Remove</button>
-        </form>
-    </div>
+        <!-- Form Section -->
+        <div id="studentIn">
+            <form id="studentForm" action="/submit" method="post">
+                <!-- Hidden input for action type -->
+                <input type="hidden" id="action" name="action" value="">
 
-    <!-- Display Lists -->
-    <div id="CSE115">
-        <h1>CSE 115</h1>
-        <ol>
-            {% for item in items %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ol>
+                <!-- Text Box for name -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+        
+                <!-- Text Box for UB ID -->
+                <label for="UBID">UB ID:</label>
+                <input type="text" id="UBID" name="UBID" placeholder="Enter your UBID">
+        
+                <!-- Select Course Box -->
+                <label for="options">Course:</label>
+                <select id="options" name="option">
+                    <option value="CSE115">CSE115</option>
+                    <option value="CSE116">CSE116</option>
+                </select>
+        
+                <!-- Add and Remove Buttons -->
+                 <div class="Buttons">
+                    <button type="button" onclick="setFormAction('add')">Add</button>
+                    <button type="button" onclick="setFormAction('remove')">Remove</button>
+                 </div>
+                
+            </form>
+        </div>
+    </div>
     </div>
     
-    <div id="CSE116">
-        <h1>CSE 116</h1>
-        <ol>
-            <li>Hi</li>
-            <li>Hello</li>
-            {% for item in items %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ol>
-    </div>
-
 </body>
 </html>
+

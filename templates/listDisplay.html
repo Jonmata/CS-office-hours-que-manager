@@ -8,7 +8,29 @@
 </head>
 <body>
     <div class="container" >
-<div id=" Student_In">
+
+        <div id="CSE116">
+            <h1>
+                CSE116
+            </h1>
+            <ol>
+                {% for student in cse116_students %}
+                <li>{{ student.name }} </li>
+                {% endfor %}
+            </ol>
+        </div>
+
+    <div id="CSE115">
+        <h1>
+            CSE115
+        </h1>
+        <ol>
+            {% for student in cse115_students %}
+            <li>{{ student.name }} </li>
+            {% endfor %}
+        </ol>
+    </div>
+    <div id="Student_In">
         <form action="/removeSelf" method="post">
             <!-- Text Box for name -->
             <label for="name">Name:</label>
@@ -21,8 +43,8 @@
             <!-- Select course Box -->
             <label for="options">Course:</label>
             <select id="options" name="option">
-                <option value="CSE 115">CSE 115</option>
-                <option value="CSE 116">CSE 116</option>
+                <option value="CSE115">CSE115</option>
+                <option value="CSE116">CSE116</option>
             </select>
     
             <br><br>
@@ -30,30 +52,6 @@
             <!-- remove person from list button-->
             <button type="submit">Remove</button>
         </form>
-    </div>
-
-    <div id="CSE115">
-        <h1>
-            CSE115
-        </h1>
-        <ol>
-            {% for item in items %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ol>
-    </div>
-    
-    <div id="CSE116">
-        <h1>
-            CSE116
-        </h1>
-        <ol>
-            <li>Hi</li>
-            <li>hello</li>
-            {% for item in items %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ol>
     </div>
     </div>
     
